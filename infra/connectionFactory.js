@@ -3,7 +3,7 @@ var mysql=require('mysql');
         return mysql.createConnection({
          host:'localhost',
          user:'root',
-         password:'vic26022008',
+         password:'',
          database:'casadocodigo'
         });
     };

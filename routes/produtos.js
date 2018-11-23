@@ -8,6 +8,7 @@ module.exports = function (app) {
         produtos.lista(function (error, results, fields) {
             res.format({
                 html:function(){
+                    console.log(results);
                     res.render('produtos/lista', { lista: results });
                 },
                 json:function(){
