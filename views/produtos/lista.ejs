@@ -1,0 +1,35 @@
+<% include ../includes/header.ejs %>
+<div>
+    <div class="container min-container">
+        <h2 class="basic-title">Listagem de Livros</h2>
+        <a href="/produtos/form" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Novo livro</a>
+        <p> </p>
+        <table class="table table-condensed table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</td>
+                    <th>Descrição</td>
+                    <th>Preço</td>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<lista.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= lista[i].titulo %>
+                    </td>
+                    <td>
+                        <%= lista[i].descricao %>
+                    </td>
+                    <td>
+                        <%= lista[i].preco %>
+                    </td>
+                    <td>Editar | Excluir </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<% include ../includes/footer.ejs %>

@@ -1,0 +1,33 @@
+<% include ../includes/header.ejs %>
+
+<div>
+    <div class="container min-container">
+        <h2 class="basic-title">Edição do Livro</h2>
+        <% if(locals.validationErrors) { %>
+           <ul class="list-unstyled">
+               <% for(var i=0;i<validationErrors.length; i++) { %>
+                   <li class="alert alert-danger"><%=validationErrors[i].msg %></li>
+               <% } %>
+           </ul>
+        <% } %>
+        <form action="/produtos" method="POST" class="well" role="form">
+            <div class="form-group">
+                <label for="titulo">Tíulo</label>
+                    <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Título do livro">
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço</label>
+                    <input type="text" name="preco" id="preco" class="form-control" placeholder="Valor do livro">
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" class="form-control"></textarea>
+            </div>
+        <button type="submit" class="btn btn-primary">Gravar</button>
+    </div>
+    </form>
+
+</div>
+</div>
+
+<% include ../includes/footer.ejs %>
